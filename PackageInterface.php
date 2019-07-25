@@ -21,12 +21,16 @@ interface PackageInterface
     /**
      * Returns the asset version for an asset.
      *
+     * @param string $path
+     *
      * @return string The version string
      */
     public function getVersion(string $path);
 
     /**
      * Returns an absolute or root-relative public path.
+     *
+     * @param string $path
      *
      * @return string The public path
      */

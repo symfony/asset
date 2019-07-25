@@ -21,12 +21,16 @@ interface VersionStrategyInterface
     /**
      * Returns the asset version for an asset.
      *
+     * @param string $path
+     *
      * @return string The version string
      */
     public function getVersion(string $path);
 
     /**
      * Applies version to the supplied path.
+     *
+     * @param string $path
      *
      * @return string The versionized path
      */

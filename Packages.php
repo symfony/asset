@@ -38,6 +38,9 @@ class Packages
         }
     }
 
+    /**
+     * @param PackageInterface $defaultPackage
+     */
     public function setDefaultPackage(PackageInterface $defaultPackage)
     {
         $this->defaultPackage = $defaultPackage;
@@ -45,6 +48,10 @@ class Packages
 
     /**
      * Adds a package.
+     *
+     * @param string $name
+     *
+     * @param PackageInterface $package
      */
     public function addPackage(string $name, PackageInterface $package)
     {

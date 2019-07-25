@@ -39,17 +39,31 @@ class JsonManifestVersionStrategy implements VersionStrategyInterface
      * With a manifest, we don't really know or care about what
      * the version is. Instead, this returns the path to the
      * versioned file.
+     *
+     * @param string $path
+     *
+     * @return string
      */
     public function getVersion(string $path)
     {
         return $this->applyVersion($path);
     }
 
+    /**
+     * @param string $path
+     *
+     * @return string
+     */
     public function applyVersion(string $path)
     {
         return $this->getManifestPath($path) ?: $path;
     }
 
+    /**
+     * @param string $path
+     *
+     * @return string|null
+     */
     private function getManifestPath(string $path)
     {
         if (null === $this->manifestData) {
